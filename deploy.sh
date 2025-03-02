@@ -73,16 +73,6 @@ echo "--------------------------------------------------------------------------
 echo "Setup Configuration File..."
 echo "---------------------------------------------------------------------------"
 
-if [ -d /tmp/dsbackup-infra-odoo-* ]; then
-    rm -rf /tmp/dsbackup-infra-odoo-*
-fi
-
-if [ -d /tmp/infra ]; then
-    rm -rf /tmp/infra
-fi
-
-# curl -u oscarherraiz:ATBBhmR9RnPQxeHYxNJyGpnNHPUp6231D46A https://bitbucket.org/dsbackup/infra-odoo/get/master.tar.gz -o /tmp/config.tar.gz
-# tar -xzf /tmp/config.tar.gz -C /tmp/
 mv -f /tmp/dsbackup-infra-odoo-* /tmp/infra
 cp /tmp/infra/${ODOO_CONFIG_FILE} /etc
 
